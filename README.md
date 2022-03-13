@@ -1,4 +1,4 @@
-# tfmod_vpc_subnet
+# terraform_vpc_subnet
 
 Terraform module to create VPC subnets in AWS using terraform
 
@@ -14,7 +14,7 @@ variable "vpc_subnets_example" { default = { name ="example", block = "10.0.0.0/
 
 ## Dependency
 
-VPC <https://github.com/virsas/tfmod_vpc>
+VPC <https://github.com/virsas/terraform_vpc>
 
 ## Terraform example
 
@@ -28,7 +28,7 @@ variable "vpc_subnets_test_a" { default = { name ="test-a", block = "10.0.0.0/24
 # VPC subnet
 ######################
 module "vpc_subnet_test_a" {
-  source = "github.com/virsas/tfmod_vpc_subnet"
+  source = "github.com/virsas/terraform_vpc_subnet"
   vpc_id  = module.vpc_main.id
   subnet  = var.vpc_subnets_test_a
 }
