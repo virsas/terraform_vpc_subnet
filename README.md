@@ -28,7 +28,7 @@ variable "vpc_subnets_test_a" { default = { name ="test-a", block = "10.0.0.0/24
 # VPC subnet
 ######################
 module "vpc_subnet_test_a" {
-  source = "github.com/virsas/terraform_vpc_subnet"
+  source = "git::https://github.com/virsas/terraform_vpc_subnet.git?ref=v1.0.0"
   vpc_id  = module.vpc_main.id
   subnet  = var.vpc_subnets_test_a
 }
